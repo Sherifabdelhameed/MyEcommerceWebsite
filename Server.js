@@ -6,11 +6,12 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const cors = require('cors');
 
+
 const Server = express();
 
 // Update CORS configuration to allow requests from your frontend EC2 instance
 const corsOptions = {
-    origin: 'http://54.204.75.21', // replace with the frontend EC2 instance IP or domain
+    origin: '54.204.75.21', // replace with the frontend EC2 instance IP or domain
     methods: ['GET', 'POST'],
     credentials: false // if you're using cookies for session management
 };
@@ -37,7 +38,7 @@ db.connect((err) => {
 Server.use(bodyParser.json());
 Server.use(express.static(path.join(__dirname, 'public')));
 Server.use(session({
-  secret: 'your-secret-key',
+  
   resave: false,
   saveUninitialized: true,
   cookie: { secure: true } // set to true if using HTTPS
@@ -125,3 +126,4 @@ Server.post('/login', (req, res) => {
 Server.listen(3000, () => {
   console.log('Server is running on port 3000');
 });
+

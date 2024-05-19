@@ -1,7 +1,6 @@
 {
-  "name": "test",
+  "name": "server.side",
   "version": "1.0.0",
-  "description": "",
   "main": "Server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -10,13 +9,9 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "description": "",
   "dependencies": {
-    "bcrypt": "^5.1.1",
-    "body-parser": "^1.20.2",
-    "cors": "^2.8.5",
-    "express": "^4.19.2",
-    "express-session": "^1.18.0",
-    "mysql": "^2.18.1",
-    "path": "^0.12.7"
+    "node": "^22.2.0",
+    "node-prune": "^1.0.2"
   }
 }
